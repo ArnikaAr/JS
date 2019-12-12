@@ -1,0 +1,141 @@
+DESCRIPTION:
+
+Create a web server that can handle 3 types of requests:
+
+1) GET requests on '/' - request for index.html page with file names from 'content' folder that are grouped by categories.
+   On the server you will have a 'content' folder with files. 'content' folder can contain sub folders of arbitrary depth.
+   You need to:
+
+   a) Implement a function that recursively reads file names from the 'content' folder and all sub folders (arbitrary depth) and returns the array of file paths.
+      Each file path must contain the partial path, without 'content' folder. For example we have the following structure:
+        - content
+        --- main.css
+        --- sub_folder
+        ----- index.js
+      File paths must be 'main.css' and 'sub_folder/index.js'.
+      See Path examples below.
+
+   b) Implement a function that takes an array of file paths and returns information about each file - its category and related labels (if any). Feel free to use either core Node.js modules or external npm libs (or both in conjunction).
+
+      File categories and the information format:
+
+      * JavaScript - files with `js` or `jsx` extension.
+
+      * TypeScript - files with `ts` or `tsx` extension.
+
+      * Definition - files with `d.ts` extension.
+
+      * Configuration - files with `json`, `yaml` or `yml` extension.
+
+      * Images
+         - files with `jpg`, `jpeg`, `png`, `svg` or `gif` extension and optional scale.
+         (optional):
+           - scale factor - part of file name: `x` symbol followed by one digit right before file extension (e.g. `file-x3.jpeg`)
+           - if scale factor is present then it should be rendered near to the file path (see `wireframes.png`)
+
+      * Logs
+         - files with `log` extension ONLY inside `logs` directory.
+         - all files for Logs category will have file path starting with `logs/YYYYMMDD/` where `YYYY` represents year, `MM` - month, `DD` - day
+         (optional):
+           - file name (do not confuse with a file path) may contain an optional stream name `stderr` or `stdout`
+           - if a stream name is present then it should be rendered near to file path (see `wireframes.png`)
+
+      * Other - all other files (including files with `log` extension that are not in `logs` folder, see `logs` category description above).
+
+      Examples for path format, categories mapping and labels:
+        `.gitignore` - Other
+        `conf.yaml` - Configuration
+        `src/index.jsx` - JavaScript
+        `src/HelperLib.TS` - TypeScript
+        `package.json` - Configuration
+        `tests/components/description.md` - Other
+        `tests/components/helper-lib.test.js` - JavaScript
+        `built/index.d.ts` - Definitions
+        `built/index.js` - JavaScript
+        `img/sprite_x2.PNG` - Images / ( Retina, scale=2 )
+        `public/upload/photo-3x4-sample-x3.jpeg` - Images / ( Retina, scale=3 )
+        `uploads/fire.gif` - Images
+        `logs/20160715/stdout/SERVICE-STDERR.LOG` - Logs / 2016-07 / ( stderr )
+        `logs/20151030/rest-api-stdout.log` - Logs / 2015-10 / ( stdout )
+        `npm-debug.log` - Other
+
+   c) Render and return a response with the html page which contains lists of file paths grouped by category/date.
+      Each file path row must contain the download and delete links.
+      See `wireframes.png`.
+
+      Categories are rendered in next order:
+        - JavaScript
+        - TypeScript
+        - Definitions
+        - Configurations
+        - Images
+        - Logs
+        - Other
+
+      Category heading shouldn't be rendered if there are no files in the category.
+
+      In addition you can implement the following (marked as (optional) above):
+      - If a file that belongs to the "image" category contains a scale factor - `( Retina, scale=<scale> )` should be rendered near to the file name.
+      - Logs should be grouped by `year-month`.
+      - If a file that belongs to the "logs" category contains stream info - `( <stream> )` should be rendered near to the file name.
+
+      For rendering use a template engine (e.g ejs, pug, mustache, jade, etc.).
+
+2) GET request on `/${fileName} - request for a file download.
+   fileName - path to a file from the 'content' folder.
+   Request is sent when user clicks on the "download" link. See `wireframes.png`.
+
+3) DELETE request on `/${fileName}` - AJAX request to delete a file.
+   fileName - path to a file from the 'content' folder.
+   AJAX request is sent when user clicks on the "delete" link. See `wireframes.png`.
+   File must be deleted from the 'content' folder and from the page.
+
+
+REQUIREMENTS:
+
+1) You can use any template engine and mime (https://www.npmjs.com/package/mime) or file-type (https://www.npmjs.com/package/file-type) (if you need) npm modules for implementation of this task.
+
+2) Split code into modules.
+
+3) For download - files must be downloaded, not opened in a browser.
+
+4) Don't use ReadStream for download file, simplify the solution and use "fs" methods
+(however you can use streams if you know how to use it and want it).
+
+5) To delete a file use fetch api.
+
+6) Project file structure should be as follows:
+   /
+     static/
+       index.html
+       /js (if needed)
+       /css (if needed)
+     content/ (according to structure mentioned above, fill in with any files/projects)
+     modules/
+        server/
+          server.js
+          index.js
+        (other modules if needed)/
+        index.js
+     index.js
+     package.json
+     ...
+
+
+WORKFLOW:
+
+Commit implemented task to git into
+branch "06-javascript-advanced"
+folder "06-javascript-advanced/03-node-js-basics/task-01"
+
+If it's more complex to start the server than running 'node {main-server-file}.js', then configure a start script in package.json
+
+SOURCES:
+
+wireframes.png - File with wireframes for this task
+
+
+DEADLINE:
+
+Due Date - 18.10.2019 23:59
+Penalty will be applied for each overdue day

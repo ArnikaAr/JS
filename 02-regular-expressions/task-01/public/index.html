@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File upload</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <script>
+        var CHUNK_SIZE = 128;
+        var ENDPOINT_URL = '/jsapiupload'
+    </script>
+</head>
+<body>
+<section class="main">
+    <div class="main__dropzone">
+        <div class="dropzone">
+
+        </div>
+        <div class="progress">
+            <progress id="progress-bar" max=100 value=0></progress>
+            <button class="progress__btn">Start/pause</button>
+        </div>
+    </div>
+    <div class="result">
+
+    </div>
+</section>
+<!-- Markup here -->
+
+<script src="script.js"></script>
+</body>
+</html>

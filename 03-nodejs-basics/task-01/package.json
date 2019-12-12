@@ -1,0 +1,23 @@
+{
+    "name": "package",
+    "version": "1.0.0",
+    "description": "",
+    "main": "modules/server/app.js",
+    "scripts": {
+        "start": "node ./modules/server/app.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "dateparser": "^1.0.6",
+        "fs": "0.0.1-security",
+        "i": "^0.3.6",
+        "node-fetch": "^2.6.0"
+    },
+    "devDependencies": {
+        "bluebird": "^3.7.1",
+        "handlebars": "^4.4.5",
+        "jquery": "^3.4.1",
+        "mime": "^2.4.4"
+    }
+}

@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .category {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .category__list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .category__item {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .category__link {
+            border: none;
+            background-color: #fff;
+            color: #2B5E81;
+            padding: 0;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+
+        .category__link:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .category__item_type_date {
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+{{#if JS}}
+    <div class="category">
+        <h1 class="category__heading">JavaScript</h1>
+        <ul class="category__list category__list_type_javascript">
+            {{#each JS}}
+                {{{checkCategory "JS" this}}}
+            {{/each}}
+        </ul>
+    </div>
+    {{#if TS}}
+    {{/if}}
+    <div class="category">
+        <h1 class="category__heading">TypeScript</h1>
+        <ul class="category__list category__list_type_typescript">
+            {{#each TS}}
+                {{{checkCategory "TS" this}}}
+            {{/each}}
+        </ul>
+    </div>
+{{/if}}
+{{#if IMG}}
+    <div class="category">
+        <h1 class="category__heading">Images</h1>
+        <ul class="category__list category__list_type_images">
+            {{#each IMG}}
+                {{{checkCategory "IMG" this}}}
+            {{/each}}
+        </ul>
+    </div>
+{{/if}}
+{{#if LOG}}
+    <div class="category">
+        <h1 class="category__heading">Logs</h1>
+        <ul class="category__list category__list_type_logs">
+            {{#each LOG}}
+                {{{checkCategory "LOG" this}}}
+            {{/each}}
+        </ul>
+    </div>
+{{/if}}
+{{#if Other}}
+    <div class="category">
+        <h1 class="category__heading">Other</h1>
+        <ul class="category__list category__list_type_other">
+            {{#each Other}}
+                {{{checkCategory "Other" this}}}
+            {{/each}}
+        </ul>
+    </div>
+{{/if}}
+
+<script>
+    document.addEventListener("click", event => {
+        const target = event.target;
+        if (target.classList.contains("category__link_type_download")) {
+            const url = target.parentElement.dataset.path;
+            fetch(url, {
+                method: 'GET'
+            });
+        } else if(target.classList.contains("category__link_type_delete")) {
+            event.preventDefault();
+            const url = target.parentElement.dataset.path;
+            console.log(url)
+            fetch(url, {
+                method: 'DELETE'
+            }).then(() => {
+                window.location.reload(false);
+            });
+            const listItem = target.parentNode;
+            listItem.remove();
+            const lists = document.querySelectorAll('.category__list');
+            lists.forEach(list => {
+                const parentList = list.parentElement.parentElement;
+                const isParentList = parentList.classList.contains("category__list");
+                if (list.childElementCount === 0) {
+                    list.parentElement.remove();
+                }
+                if (parentList.childElementCount === 0 && isParentList) {
+                    parentList.parentElement.remove()
+                }
+            });
+        }
+    });
+</script>
+
+</body>
+</html>

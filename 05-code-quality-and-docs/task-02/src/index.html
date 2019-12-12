@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Fix me, please</title>
+</head>
+
+<body>
+<form>
+    <div class="form-holderArea">
+        <h1>Send request:
+        </h1>
+        <div class="formMain">
+            <p><label for="name">Name: <br><small>(min 3 characters length)</small></label>
+                <input type="text" id="name" class="input_name" name="name"></p>
+
+            <p><label for="second_name">Second name: <br>
+                <small>(min 3 characters length)</small></label>
+                <input type="text" id="second_name" name="second_name" class="second_nameClass">
+            </p>
+            <p><label for="details_block">Add details:</label>
+                <input type="checkbox" id="details_block" name="details_block" class="input_name">
+                <div class="details" id="details"><textarea  id="txtArea"></textarea></div>
+                <button class="SubmitButton" type="submit">
+                    Send
+                </button>
+            </p>
+        </div>
+    </div>
+</form>
+<div class="success-PopUpOverlay" id="success-PopUpOverlay"></div>
+    <div class="successHolder">
+        <span class="userName"></span>
+        <p>thanks for your request!</p>
+        <button class="closeButton">Close</button>
+    </div>
+
+</body>
+</html>

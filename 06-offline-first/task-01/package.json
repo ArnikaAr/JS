@@ -1,0 +1,41 @@
+{
+  "name": "task-01",
+  "version": "1.0.0",
+  "description": "In this task you need to build a wrapper library to hold data offline, that supports different storage technologies and provide infrastructure to build it.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^16.5.0",
+    "gulp": "^4.0.2",
+    "gulp-eslint": "^6.0.0",
+    "gulp-uglify-es": "^2.0.0",
+    "idb": "^4.0.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^10.0.0",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.1"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ]
+    ]
+  }
+}

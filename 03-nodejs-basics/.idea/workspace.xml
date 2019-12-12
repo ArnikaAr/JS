@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e4107491-c3d1-43bd-9d3e-ee72bc5fafca" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/task-01/content/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/task-01/content/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-01/modules/chechCategory_helper.js" beforeDir="false" afterPath="$PROJECT_DIR$/task-01/modules/chechCategory_helper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-01/modules/checkFilesType.js" beforeDir="false" afterPath="$PROJECT_DIR$/task-01/modules/checkFilesType.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-01/modules/dataParser.js" beforeDir="false" afterPath="$PROJECT_DIR$/task-01/modules/dataParser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-01/modules/main_hb.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/task-01/modules/main_hb.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-01/modules/readerDirFiles.js" beforeDir="false" afterPath="$PROJECT_DIR$/task-01/modules/readerDirFiles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-01/modules/render.js" beforeDir="false" afterPath="$PROJECT_DIR$/task-01/modules/render.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-01/modules/server/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/task-01/modules/server/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-01/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/task-01/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-01/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/task-01/package.json" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1SplObtQIDli071xLnWsv7uyxF0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/task-01" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e4107491-c3d1-43bd-9d3e-ee72bc5fafca" name="Default Changelist" comment="" />
+      <created>1572268386078</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1572268386078</updated>
+      <workItem from="1572268387177" duration="143000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

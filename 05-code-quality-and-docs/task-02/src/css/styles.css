@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, Helvetica, sans-serif, serif;
+}
+
+.form-holderArea {
+    padding: 20px;
+    margin: 20px auto;
+    width: 500px;
+    background: #DDDDDD;
+    position: relative;
+}
+
+.form-holderArea h1 {
+    color: black;
+}
+
+#name {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+p {
+    padding-bottom: 25px;
+    clear: both;
+}
+
+label {
+    float: left;
+    margin-bottom: 10px;
+}
+
+.second_nameClass {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    clear: both;
+}
+
+label[for="info_block"] {
+    padding: 0 20px 0 0;
+}
+
+#details p {
+    padding: 0;
+    margin: 0;
+}
+
+.SubmitButton {
+    bottom: 10px;
+    left: 467px;
+    position: absolute;
+}
+
+
+#success-PopUpOverlay {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    left: 0px;
+    bottom: 0;
+    background: #000;
+    opacity: .2;
+}
+
+.details textarea {
+    width: 493px;
+}
+
+/* style for error */
+.error {
+    -webkit-box-shadow: 0 0 1px 1px red;
+    -moz-box-shadow: 0 0 1px 1px red;
+    box-shadow: 0 0 1px 1px red
+}
+
+.successHolder {
+    margin-left: -100px;
+    margin-top: -90px;
+    left: 50%;
+    top: 50%;
+    opacity: 1;
+    padding: 40px;
+    position: relative;
+    -webkit-box-shadow: 2px 3px 6px 2px grey;
+    -moz-box-shadow: 2px 3px 6px 2px grey;
+    box-shadow: 2px 3px 6px 2px grey;
+    width: 200px;
+    height: 100px;
+    background: white;
+    display: none;
+}
+
+.successHolder button {
+    position: absolute;
+    top: 130px;
+    right: 40px;
+}
+
+.success-PopUpOverlay {
+    display: none;
+}
+
+.successHolder {
+    width: 200px;
+    position: absolute;
+    height: 100px;
+    background: white
+}
+
+.details {
+    display: none;
+    width: 420px;
+    max-height: 100px;
+    max-width: 493px;
+    min-width: 493px;
+    height: 60px;
+}

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/styles/main.min.css">
+</head>
+<body>
+<script src="./assets/scripts/main.min.js"></script>
+<script>
+    let idbSupported = false;
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        if ("indexedDB" in window) {
+            idbSupported = true;
+        }
+        if (idbSupported) {
+            const debug = {hello: 'world'};
+            storageItem.save('lololo', debug, storageItem.INDEXED_DB, storageItem.connect);
+            storageItem.save(4, debug, storageItem.LOCAL_STORAGE);
+            storageItem.save(4, debug, storageItem.LOCAL_STORAGE);
+            storageItem.get(5, storageItem.SESSION_STORAGE, (response) => {
+                console.log('Get items 5', response);
+            });
+            storageItem.get('lolo', storageItem.INDEXED_DB, storageItem.connect);
+            storageItem.getAll(storageItem.SESSION_STORAGE, (response) => {
+                console.log(response);
+            });
+            storageItem.getAll(storageItem.INDEXED_DB, storageItem.connect);
+        }
+    }, false);
+</script>
+</body>
+</html>

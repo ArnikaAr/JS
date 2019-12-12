@@ -1,0 +1,79 @@
+/* Styles here */
+body{
+    display: flex;
+    justify-content: center;
+}
+.main {
+    width: 90%;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.main__dropzone {
+    width: 45%;
+    height: 70vh;
+
+}
+
+.dropzone {
+    width: 100%;
+    height: 85%;
+    border: 3px solid gray;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.result {
+    width: 50%;
+    height: 70vh;
+    border: 3px solid gray;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.progress {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5% 0 0 0;
+}
+
+#progress-bar {
+    width: 83%;
+    height: 25px;
+}
+
+.progress__btn {
+    width: 15%;
+}
+
+.previews {
+    width: 90%;
+    padding: 3%;
+    display: flex;
+    flex-direction: row;
+}
+
+.previewsImg img{
+    width: 10rem;
+    height: 10rem;
+}
+
+.previewInfo {
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+}
+
+.previewName {
+    font-size: 20px;
+}
+
+.previewSize {
+}
